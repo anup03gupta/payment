@@ -1,0 +1,12 @@
+---
+applications:
+- name: payment-service
+  memory: 768M
+  instances: 1
+  random-route: true
+  buildpacks:
+  - https://github.com/cloudfoundry/java-buildpack.git
+  
+  env:
+    http_proxy: http://web.ind.zensar.com:80
+    https_proxy: https://web.ind.zensar.com:80
