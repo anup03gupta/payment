@@ -8,8 +8,8 @@ import com.zensar.broker.dto.BeneficiaryDTO;
 @Service
 public interface AccountService {
 
-	public Iterable<AccountDTO> getAccounts();
+	public Iterable<AccountDTO> getAccounts(Integer pageNo, Integer pageSize, String sortBy, String order);
 	
-	public Iterable<BeneficiaryDTO> getBeneficiariesbyAccountId(Long id);
+	public Iterable<BeneficiaryDTO> getBeneficiariesbyAccountId(Long id, Integer pageNo, Integer pageSize, String sortBy, String order);
 
 }

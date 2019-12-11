@@ -13,7 +13,7 @@ public interface CreatePaymentService {
 
 	public List<AccountDTO> getAccountDetails();
 	
-	public Iterable<PaymentDTO> getAllPayments();
+	public Iterable<PaymentDTO> getAllPayments(Integer pageNo, Integer pageSize, String sortBy, String order);
 	
 	public String createNewPayment(CreateNewPaymentRequest payment);
 }
