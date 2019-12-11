@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>payment-service</artifactId>
+	<artifactId>mfbrokerpoc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>payment-service</name>
+	<name>mfbrokerpoc</name>
 	<description>Demo project for Spring Boot and broker integration
 	</description>
 	<packaging>jar</packaging>
