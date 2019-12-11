@@ -7,9 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.zensar.broker.bean.CreateNewPaymentRequest;
@@ -21,6 +23,7 @@ import com.zensar.broker.service.CreatePaymentService;
 import com.zensar.broker.service.SearchEngineService;
 import com.zensar.broker.utils.CommonUtils;
 
+@CrossOrigin(origins = "*")
 @RestController
 @EnableAutoConfiguration
 public class PaymentSearchController {
@@ -47,11 +50,15 @@ public class PaymentSearchController {
 	}
 	
 	@GetMapping(path="/v1/payments")
-	public StandardResponse getAllPayments() {
+	public StandardResponse getAllPayments(
+			@RequestParam(defaultValue = "0") Integer pageNo, 
+            @RequestParam(defaultValue = "10") Integer pageSize,
+            @RequestParam(defaultValue = "id") String sortBy,
+            @RequestParam(defaultValue = "asc") String order) {
 		
 		StandardResponse res = new StandardResponse();
 		
-		Iterable<PaymentDTO> allPayments = paymentService.getAllPayments();
+		Iterable<PaymentDTO> allPayments = paymentService.getAllPayments(pageNo, pageSize, sortBy, order);
 		res.setData(allPayments);
 		
 		return res;
