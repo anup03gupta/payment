@@ -12,6 +12,15 @@ INSERT INTO beneficiary (id, ben_code, statement_references, status, from_accoun
 INSERT INTO beneficiary (id, ben_code, statement_references, status, from_account_id, to_account_id) VALUES  (105, 5, 'TEST STAT REF5', 'Active', 987654321, 2019001012);
 INSERT INTO beneficiary (id, ben_code, statement_references, status, from_account_id, to_account_id) VALUES  (106, 6, 'TEST STAT REF6', 'Active', 987654321, 777777777);
 INSERT INTO beneficiary (id, ben_code, statement_references, status, from_account_id, to_account_id) VALUES  (107, 7, 'TEST STAT REF7', 'Active', 987654321, 888888888);
+INSERT INTO beneficiary (id, ben_code, statement_references, status, from_account_id, to_account_id) VALUES  (108, 7, 'TEST STAT REF8', 'Active', 777777777, 888888888);
+INSERT INTO beneficiary (id, ben_code, statement_references, status, from_account_id, to_account_id) VALUES  (118, 7, 'TEST STAT REF8', 'Active', 777777777, 987654321);
+INSERT INTO beneficiary (id, ben_code, statement_references, status, from_account_id, to_account_id) VALUES  (128, 7, 'TEST STAT REF8', 'Active', 777777777, 999999999);
+INSERT INTO beneficiary (id, ben_code, statement_references, status, from_account_id, to_account_id) VALUES  (109, 7, 'TEST STAT REF8', 'Active', 888888888, 888888888);
+INSERT INTO beneficiary (id, ben_code, statement_references, status, from_account_id, to_account_id) VALUES  (119, 7, 'TEST STAT REF8', 'Active', 888888888, 987654321);
+INSERT INTO beneficiary (id, ben_code, statement_references, status, from_account_id, to_account_id) VALUES  (129, 7, 'TEST STAT REF8', 'Active', 888888888, 987654321);
+INSERT INTO beneficiary (id, ben_code, statement_references, status, from_account_id, to_account_id) VALUES  (110, 7, 'TEST STAT REF8', 'Active', 999999999, 888888888);
+INSERT INTO beneficiary (id, ben_code, statement_references, status, from_account_id, to_account_id) VALUES  (120, 7, 'TEST STAT REF8', 'Active', 999999999, 987654321);
+INSERT INTO beneficiary (id, ben_code, statement_references, status, from_account_id, to_account_id) VALUES  (130, 7, 'TEST STAT REF8', 'Active', 999999999, 777777777);
 
 
 INSERT INTO payment (id, amount, desc, batch_id, from_account, status, valuedate, from_account_id, to_account_id) VALUES (2019001001, 500.00, 'POC Payment1', 2019001001, 123456789, 'Release', '2019-12-16', 2019001012, 987654321);
